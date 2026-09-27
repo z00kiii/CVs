@@ -1,0 +1,245 @@
+%-------------------------
+% Resume in Latex
+% Author : Matty
+% Based on: https://github.com/jakegut/resume (which was itself based on https://github.com/sb2nov/resume)
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\linespread{1.09}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage[T1]{fontenc}
+\usepackage{ebgaramond}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+
+% -------------------- FONT OPTIONS --------------------
+% sans-serif
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% serif
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+% \fancyhead[R]{\vspace*{-2in}\hspace*{6.3in}\includegraphics[width=3cm]{Foto.JPG}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.15in}
+\addtolength{\evensidemargin}{-0.15in}
+\addtolength{\textwidth}{0.24in}
+\addtolength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Subsection formatting
+\titleformat{\subsection}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{\hspace{-.15in}}{0em}{}[\color{black}\vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+% -------------------- CUSTOM COMMANDS --------------------
+
+\newcommand{\medium}{\fontsize{9.5}{12}\selectfont}
+\newcommand{\moremedium}{\fontsize{11}{13}\selectfont}
+
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-1.6pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \medium\selectfont\textbf{#1} & #2 \\
+      #3 & \textit{#4} \\
+      \ifx&#5&\else#5 & \textit{#6} \\\fi
+    \end{tabular*}\vspace{-3pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \medium#2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\setlength{\footskip}{4.08003pt}
+
+% Slightly increase font weight via PDF stroke
+\AtBeginDocument{\special{pdf:literal 0.15 w 2 Tr}}
+
+% -------------------- START OF DOCUMENT --------------------
+\begin{document}
+
+% -------------------- HEADING--------------------
+\begin{flushright}
+  % \vspace{-4pt}
+  \color{gray}
+  \item
+  %Last Updated on January 12th, 2024
+\end{flushright}
+
+\vspace{-5pt}
+
+\begin{center}
+    \textbf{\Huge \scshape Atash Hauschild} \\ \vspace{8pt}
+    \moremedium
+    \faIcon{github}
+    \href{https://github.com/z00kiii}{\underline{github.com/z00kiii}} $  $
+    \faIcon{phone}
+    \href{tel:0151 41893596}
+    {\underline{0151 41893596}} $  $
+    % \faIcon{linkedin}
+    % \href{https://linkedin.com/in/mattydoe}{\underline{linkedin.com/in/mattydoe}} $  $
+    \faIcon{envelope}
+    \href{mailto:atash.hauschild@icloud.com}
+    {\underline{atash.hauschild@icloud.com}}
+
+
+
+\end{center}
+% -------------------- SUMMARY --------------------
+\vspace{6pt}
+\medium{Entwickler und Mitgründer mit Schwerpunkt Machine Learning, Computer Vision und Systemarchitektur –
+mit einer langjährigen Faszination für das Gehirn, der ich jetzt konsequent nachgehen will.
+Wie es strukturiert ist, welche Prozesse darin ablaufen, wie Denken, Erinnerung und Sprache funktionieren:
+diesen Fragen möchte ich wissenschaftlich nachgehen.}
+
+% -------------------- BILDUNG --------------------
+\section{Bildung}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Duales Studium\footnotesize{, Audi AG \& DHBW Mosbach}}{Okt 2020 -- Sept 2023}
+      {Bachelor of Science Wirtschaftsinformatik, Schwerpunkt Künstliche Intelligenz}{Schnitt: 1.4}
+      {Thesis: Open Set Object Detection für Active Learning}{}
+
+    \vspace{-8pt}
+
+    \subsection{Relevante Kurse}
+    \small{Vertiefung Künstliche Intelligenz, Natural Language Processing, Algorithmen \& Datenstrukturen,
+    Statistik, Analysis \& Lineare Algebra, Logik \& Algebra, Big Data, Datenbanken,
+    Objektorientierte Programmierung, Projekt Management}
+
+  \resumeSubHeadingListEnd
+
+% -------------------- BERUFLICHER WERDEGANG --------------------
+\section{Beruflicher Werdegang}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Co-Founder\footnotesize{, ARC62}}{Mai 2024 -- heute}
+      {KI, Software \& Systemarchitektur – autonomes Grab-\&-Go-System Einkaufssystem für den Einzelhandel}{}
+      {}{}
+    \resumeItemListStart
+        \resumeItem{Echtzeit-Personentracking (\textbf{BoTSORT}, Objekterkennung) mit \textbf{Active-Learning}-Pipeline zur Trainingsdaten-Priorisierung}
+        \resumeItem{Entwicklung eigener Algorithmen zur robusten Signalverarbeitung von Wägezellen (Load Cells) auf Edge-Hardware}
+        \resumeItem{Gesamtverantwortung für Systemarchitektur, Docker-Deployment und Edge-Computing-Infrastruktur}
+        \resumeItem{Business Development und Kundenkontakt; mehrfache Auszeichnung bei Pitch-Wettbewerben}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Product Manager\footnotesize{, Audi AG}}{Okt 2023 -- Apr 2025}
+      {Lifecycle-Verantwortung und Einführung von Softwareprodukten für die Fahrzeugfertigung}{}
+      {}{}
+    \resumeItemListStart
+        \resumeItem{Anforderungsmanagement und Feature-Priorisierung für Fertigungssoftware (Produktionssteuerung, Verbauplanung)}
+        \resumeItem{Koordination von Software-Rollouts sowie Debugging fehlerhafter Systemkomponenten im Produktivbetrieb}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% -------------------- PROJEKTE --------------------
+\section{Projekte}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+        {\textbf{Open Set (Object) Detection}, Bachelorthesis\small{, Audi AG} $|$ \footnotesize\emph{Python, PyTorch, FCOS, AWS, Docker, MLflow}}{Jul -- Sept 2023}
+        \resumeItemListStart
+            \resumeItem{Konzeptionierung und Implementierung einer Pipeline, um neuartige und einem Modell unbekannte Klassen \\
+            als solche zu identifizieren (\textbf{Open Set Detection})}
+            \resumeItem{Probabilistische Modellierung mittels \textbf{Gaussian Mixture Models} zur Erkennung unbekannter Klassen}
+            \resumeItem{Auseinandersetzung mit \textbf{Active Learning}: selektiver Datenerwerb über Modell-Unsicherheit als effizientes Lernprinzip}
+            \resumeItem{Anwendung: Bauteilerkennung auf Leiterplatten; Identifikation neuartiger Bauteile verbessert Stücklistengenauigkeit}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+% -------------------- SKILLS --------------------
+\section{Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+
+     \textbf{Sprachen}{: Python, TypeScript, C\#, Java, HTML/CSS} \\
+
+     \textbf{Frameworks / Bibliotheken}{: PyTorch, NumPy, SciPy, pandas, Matplotlib, Plotly, ONNX, TensorFlow (Lite)}\\
+
+     \textbf{Tools}{: Jupyter, Git, Docker, \LaTeX, MLflow, AWS (CDK)}\\
+
+     % Praktikum: keyword matching
+     % \textbf{Methodiken}{: Computer Vision, Object Detection \& Tracking, Signal Processing, Active Learning, Edge Computing, CI/CD}\\
+
+    }}
+ \end{itemize}
+
+% -------------------- ERFAHRUNGEN --------------------
+\section{Erfahrungen}
+  \resumeSubHeadingListStart
+
+          \resumeProjectHeading
+          {\textbf{Sprachen} $|$ Deutsch \small{(Muttersprache)}, Englisch \small{(verhandlungssicher)}, \small{Französisch (Grundkenntnisse)}}{}
+          \vspace{2pt}
+          \resumeProjectHeading
+          {\textbf{Programmieren, Künstliche Intelligenz, 3D-Druck}}{}
+          \resumeProjectHeading
+          {\textbf{Gitarre, Improvisationstheater, Snowboarden, Calisthenics}}{}
+
+    \resumeSubHeadingListEnd
+
+\end{document}
